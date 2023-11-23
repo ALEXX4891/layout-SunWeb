@@ -1,0 +1,412 @@
+/* #region FONTS */
+@font-face {
+    font-family: "RFDewi";
+    src: local("RFDewi-Regular"),
+      url("../fonts/RFDewi-Regular.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/RFDewi-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }  
+  
+  @font-face {
+    font-family: "RFDewi";
+    src: local("RFDewi-Semibold"),
+      url("../fonts/RFDewi-Semibold.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/RFDewi-Semibold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  
+  @font-face {
+    font-family: "RFDewi";
+    src: local("RFDewi-Bold"),
+      url("../fonts/RFDewi-Bold.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/RFDewi-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+}
+
+
+
+    
+@font-face {
+    font-family: "RFDewiExpanded";
+    src: local("RFDewiExpanded-Regular"),
+      url("../fonts/RFDewiExpanded-Regular.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/RFDewiExpanded-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }  
+  
+  @font-face {
+    font-family: "RFDewiExpanded";
+    src: local("RFDewiExpanded-Semibold"),
+      url("../fonts/RFDewiExpanded-Semibold.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/RFDewiExpanded-Semibold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+  
+  @font-face {
+    font-family: "RFDewiExpanded";
+    src: local("RFDewiExpanded-Bold"),
+      url("../fonts/RFDewiExpanded-Bold.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/RFDewiExpanded-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+}
+  
+  /* #endregion FONTS */
+
+
+
+
+:root {
+    --Dark-Grey: #5D5D5D;
+    --Light-black: #161515;
+    --Red: #E63E35;
+    --White: #FFF;
+    --Black: #000000;
+    --Background: #161515;
+    --Grey: #B8B8B8;
+
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+a {
+    color: var(--color-000000);
+    text-decoration: none;
+}
+
+body {
+    font-family: "RFDewi", sans-serif;
+    /* font-weight: 400; */
+    /* font-size: 16px; */
+    /* line-height: 32px; */
+    /* color: var(--color-000000); */
+    /* background-color: #e9e0e0; */
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.section {
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.container {
+    /* padding: 50px; */
+    max-width: 358px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin: 0;
+    /* margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px; */
+}
+
+.section-text {
+    margin: 0;
+}
+
+.btn-burger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+/* .burger:focus-visible {
+    outline: none;
+    outline-offset: 3px;
+    outline: 2px solid #ff9900;
+}
+
+.burger:active {
+    outline: none;
+}
+
+.burger:active .burger__line {
+    outline: none;
+    background-color: var(--color-FF9900);
+} */
+
+.burger__line {
+    position: absolute;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    border-radius: inherit;
+    background-color: var(--Black);
+    transform: translateX(-50%);
+}
+
+.burger__line:first-child {
+    top: 8px;
+}
+
+.burger__line:last-child {
+    bottom: 8px;
+}
+
+.burger__line:nth-child(2) {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* .burger--active {
+    outline: none !important;
+    z-index: 100;
+}
+
+.burger--active .burger__line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger--active .burger__line:first-child {
+    left: 0;
+    top: 50%;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.burger--active .burger__line:last-child {
+    bottom: auto;
+    left: 0;
+    top: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+} */
+
+.heder__top {
+    padding: 8px 0px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--White);
+
+}
+
+.nav {
+    padding-left: 20%;
+    display: none;
+    width: 708px;
+    text-transform: uppercase;
+
+}
+
+.header__logo-img {
+    width: 34px;
+    height: 34px;
+}
+
+.header__logo,
+.btn-call,
+.btn-phone {
+    margin-right: 16px;
+}
+
+.btn-burger,
+.btn-call,
+.btn-phone {
+    padding: 0;
+    background-color: var(--White);
+    min-width: 34px;
+    border: 2px solid var(--Black);
+}
+
+.btn-phone {
+    /* width: 200px; */
+    border-color: var(--Red);
+}
+
+.btn-call {
+    width: 160px;
+    font-size: 15px;
+    margin-right: 16px;
+}
+
+.btn-burger {
+    border-color: var(--Grey);
+
+}
+
+.header__btn {
+    height: 34px;
+    text-transform: uppercase;
+}
+
+.header__top-left {
+    justify-content: space-between;
+}
+
+.header {
+    height: 50px;
+}
+
+
+.main__contacts {
+    height: 470px;
+}
+
+.contacts {
+    padding-top: 14px;
+    background-color: var(--Light-black);
+}
+
+.contacts__text {
+    color: var(--White, #FFF);
+    font-family: RFDewi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.contacts__text_red {
+    color: var(--Red);
+}
+
+.contacts__subtitle {
+    margin-bottom: 9px;
+    color: var(--Dark-Grey, #5D5D5D);
+    font-family: RFDewiExpanded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+}
+
+.contacts__title {
+    margin-bottom: 40px;
+    color: var(--Light-Gray, #FBFBFB);
+    font-family: RFDewiExpanded;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.contacts__adress {
+    margin-bottom: 6px;
+}
+
+.contacts__icons {
+    width: 57px;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+/* .contacts__text:last-child {
+    margin-bottom: 10px;
+} */
+
+
+
+
+.main__people {
+    background-color: var(--White);
+
+}
+.people {
+    padding-top: 14px;
+}
+
+.people__office {
+
+}
+.cards {
+
+}
+.cards__title {
+    margin-bottom: 14px;
+    color: var(--Light-black, #161515);
+    font-family: RFDewiExpanded;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.cards__item {
+
+}
+.card {
+
+}
+.card__img {
+
+}
+
+.card__name {
+
+}
+
+.card_post {
+
+}
+ 
+
+
