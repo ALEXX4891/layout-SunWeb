@@ -462,7 +462,7 @@ body {
     margin-bottom: 13px;
 }
 
-.cards__item:nth-child(2n+1) {
+.cards__item:nth-child(2n+2) {
     margin-bottom: 28px;
 }
 .card {
@@ -741,6 +741,7 @@ margin-bottom: 30px;
     }
 
     .header__phone {
+        display: block;
         color: var(--Red);
         text-align: right;
         font-family: RFDewiExpanded;
@@ -752,6 +753,7 @@ margin-bottom: 30px;
     }
 
     .header__desc {
+        display: block;
         height: 50px;
         color: var(--Black);
         text-align: right;
