@@ -175,6 +175,24 @@ body {
     height: 30px;
 }
 
+.nav__link {
+    /* transition: outline 0.3s ease-in-out */
+}
+
+.nav__link:hover {
+    /* background-color: var(--White); */
+    outline: 2px solid var(--White);
+    /* outline-color: var(--White); */
+    outline-offset: 10px;
+
+}
+
+.btn-call:hover {
+    background-color: var(--Black);
+    color: var(--White);
+    transition: all 0.3s ease-in-out
+}
+
 /* .burger:focus-visible {
     outline: none;
     outline-offset: 3px;
@@ -387,7 +405,7 @@ body {
 }
 
 .contacts {
-    padding-top: 14px;
+    /* padding-top: 14px; */
     background-color: var(--Light-black);
 }
 
@@ -406,6 +424,8 @@ body {
 
 .contacts__container {
     max-width: 600px;
+    position: sticky;
+    top: 158px;
 }
 
 .contacts__subtitle {
@@ -433,12 +453,16 @@ body {
     margin-bottom: 6px;
 }
 
-.contacts__icons {
+.contacts__icon {
     margin-bottom: 6px;
     width: 57px;
     justify-content: space-between;
 }
 
+.contacts__icon:hover svg path {
+    fill: var(--Red);
+    transition: fill 0.3s ease-in-out;
+}
 
 .main__people {
     background-color: var(--White);
@@ -459,6 +483,7 @@ body {
     text-transform: uppercase;
 }
 .cards__item {
+    gap: 13px;
     margin-bottom: 13px;
 }
 
@@ -695,6 +720,12 @@ margin-bottom: 30px;
 }
 
 @media (min-width: 1280px) {
+    .header {
+        position: sticky;
+        top: 0px;
+        z-index: 1000;
+    }
+
     .footer__container {
         display: flex;
         justify-content: space-between;
@@ -722,13 +753,16 @@ margin-bottom: 30px;
         padding-top: 68px;
     }
     .header__container {
-        padding-top: 8px;
+        padding-top: 0px;
         height: 80px;
+        background-color: var(--White);
     }
 
     .header__container_black {
         padding-top: 0;
         height: 68px;
+        background-color: var(--Black);
+
     }
 
     .header__logo-img {
@@ -815,19 +849,21 @@ margin-bottom: 30px;
         /* max-width: 100px; */
         display: flex;
         flex-wrap: wrap;
+        gap: 10px 17px;
         /* justify-content: space-between; */
     }
 
     .card {
-        max-width: 430px;
-        margin-right: 10px;
+        width: 430px;
+        /* margin-right: 10px; */
         /* display: flex; */
         /* flex-wrap: wrap; */
         /* justify-content: space-between; */
     }
 
     .card:nth-child(2n+1) {
-        margin-right: 17px
+        gap: 17px;
+        /* margin-right: 17px */
     }
 
     .card__desc {
@@ -855,8 +891,8 @@ margin-bottom: 30px;
     }
 
     .main__top {
-        max-height: 975px;
-        overflow: hidden;
+        /* max-height: 975px;
+        overflow: hidden; */
     }
 
     .contacts__title {
